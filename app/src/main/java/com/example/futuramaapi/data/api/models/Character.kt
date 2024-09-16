@@ -9,5 +9,5 @@ data class Character(
     val status: String,
     val species: String,
     val createdAt: Date,
-    val image: String
+    val image: String?
 )

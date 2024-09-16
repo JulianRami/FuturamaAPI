@@ -10,12 +10,12 @@ import com.example.futuramaapi.utils.showToast
 
 class CharacterPostViewHolder(
     private val binding: CharacterViewBinding,
-    private val onEpisodesClickListener: (position: Int) -> Unit
+    private val onViewInfoClickListener: (position: Int) -> Unit
 ): RecyclerView.ViewHolder(binding.root) {
     fun bind(character: Character) {
         with(binding) {
             btnEpisodes.setOnClickListener {
-                onEpisodesClickListener(character.id)
+                onViewInfoClickListener(character.id)
             }
 
             tvCharacterName.text = tvCharacterName.context.getString(
@@ -27,7 +27,7 @@ class CharacterPostViewHolder(
             tvCharacterGender.text =
                 tvCharacterGender.context.getString(R.string.character_gender, character.gender)
 
-            ivCharacterPicture.loadCircleImage(character.image)
+            character.image?.let { ivCharacterPicture.loadCircleImage(it) }
 
             ivCharacterStatus.apply {
                 setImageDrawable(

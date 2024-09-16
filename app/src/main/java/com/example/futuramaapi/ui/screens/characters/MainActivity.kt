@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initRV() {
         rvCharactersAdapter = RVCharactersAdapter(
-            onEpisodesClickListener = { characterId ->
+            onViewInfoClickListener = { characterId ->
                 launchCharacterActivity(characterId)
             }
         )

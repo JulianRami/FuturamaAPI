@@ -19,33 +19,63 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="699dp">
+
+            <TextView
+                android:id="@+id/tv_character_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_character_gender"
+                app:layout_constraintVertical_bias="0.344"
+                tools:text="Dead" />
+
+            <TextView
+                android:id="@+id/tv_character_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_character_specie"
+                app:layout_constraintVertical_bias="0.245"
+                tools:text="Male" />
 
             <ImageView
                 android:id="@+id/iv_character_photo"
-                android:layout_width="128dp"
-                android:layout_height="128dp"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.225"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/tv_character_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintStart_toEndOf="@+id/iv_character_photo"
+                app:layout_constraintBottom_toTopOf="@+id/iv_character_photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.22"
                 tools:text="Rick Sanchez" />
 
             <TextView
                 android:id="@+id/tv_character_specie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/iv_character_photo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_character_photo"
+                app:layout_constraintVertical_bias="0.2"
                 tools:text="Humano" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

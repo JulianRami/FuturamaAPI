@@ -39,7 +39,9 @@ class CharacterActivity : AppCompatActivity() {
                     uiState.character?.let { character ->
                         tvCharacterName.text = character.name
                         tvCharacterSpecie.text = character.species
-                        ivCharacterPhoto.loadImage(character.image)
+                        tvCharacterGender.text = character.gender
+                        tvCharacterStatus.text = character.status
+                        character.image?.let { ivCharacterPhoto.loadImage(it) }
                     }
                     if (uiState.episodes.isNotEmpty()) {
                         rvEpisodesAdapter.episodes = uiState.episodes

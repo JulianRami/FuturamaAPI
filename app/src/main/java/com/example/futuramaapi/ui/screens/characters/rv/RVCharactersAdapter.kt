@@ -7,7 +7,7 @@ import com.example.futuramaapi.data.api.models.Character
 import com.example.futuramaapi.databinding.CharacterViewBinding
 
 class RVCharactersAdapter(
-    private val onEpisodesClickListener: (id: Int) -> Unit
+    private val onViewInfoClickListener: (id: Int) -> Unit
 ): RecyclerView.Adapter<CharacterPostViewHolder>() {
 
     var characters = emptyList<Character>()
@@ -20,7 +20,7 @@ class RVCharactersAdapter(
         )
         return CharacterPostViewHolder(
             binding = binding,
-            onEpisodesClickListener = onEpisodesClickListener
+            onViewInfoClickListener = onViewInfoClickListener
         )
     }
 
