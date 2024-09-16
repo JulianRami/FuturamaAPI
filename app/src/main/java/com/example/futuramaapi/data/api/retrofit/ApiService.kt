@@ -8,7 +8,6 @@ import retrofit2.http.Path
 
 interface ApiService {
 
-    // https://rickandmortyapi.com/api/character
     // https://futuramaapi.com/api/characters
     @GET("characters")
     suspend fun getCharacters(): Characters

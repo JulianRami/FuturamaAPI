@@ -2,15 +2,11 @@ package com.example.futuramaapi.data.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.futuramaapi.data.api.models.Character
-import com.example.futuramaapi.data.api.models.Episode
 import com.example.futuramaapi.data.api.retrofit.RetrofitService
 import com.example.futuramaapi.ui.screens.character.uiState.CharacterUiState
-import com.example.futuramaapi.utils.getIdFromUrl
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class CharacterViewModel: ViewModel() {

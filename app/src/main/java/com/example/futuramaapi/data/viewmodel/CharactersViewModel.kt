@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import android.util.Log
 
 class CharactersViewModel: ViewModel() {
 
@@ -27,7 +26,6 @@ class CharactersViewModel: ViewModel() {
 
     private suspend fun getCharacters() {
         val characters = retrofitApi.getCharacters()
-        println("Characters received: $characters")
         _uiState.value = _uiState.value.copy(
             isLoading = false,
             characters = characters

@@ -16,9 +16,6 @@
         android:theme="@style/Theme.FuturamaAPI"
         tools:targetApi="31">
         <activity
-            android:name=".ui.screens.location.LocationActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.screens.character.CharacterActivity"
             android:exported="false" />
         <activity

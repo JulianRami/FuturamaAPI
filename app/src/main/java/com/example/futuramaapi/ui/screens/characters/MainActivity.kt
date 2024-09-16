@@ -43,13 +43,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun launchCharacterActivity(characterId: Int) {
-//        val intent = Intent(this, CharacterActivity::class.java)
-//        val bundle = bundleOf(
-//            "characterId" to characterId
-//        )
-//        intent.putExtras(bundle)
-//        startActivity(intent)
-
         startActivity(
             Intent(
                 this,

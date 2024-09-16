@@ -6,11 +6,9 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.futuramaapi.data.viewmodel.CharacterViewModel
 import com.example.futuramaapi.databinding.ActivityCharacterBinding
 import com.example.futuramaapi.ui.screens.character.rv.RVEpisodesAdapter
-import com.example.futuramaapi.utils.loadCircleImage
 import com.example.futuramaapi.utils.loadImage
 import kotlinx.coroutines.launch
 
@@ -31,10 +29,6 @@ class CharacterActivity : AppCompatActivity() {
 
     private fun initRV() {
         rvEpisodesAdapter = RVEpisodesAdapter()
-//        binding.rvCharacterEpisodes.apply {
-//            layoutManager = LinearLayoutManager(this@CharacterActivity)
-//            adapter = rvEpisodesAdapter
-//        }
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -44,6 +38,7 @@ class CharacterActivity : AppCompatActivity() {
                 with(binding) {
                     uiState.character?.let { character ->
                         tvCharacterName.text = character.name
+                        tvCharacterSpecie.text = character.species
                         ivCharacterPhoto.loadImage(character.image)
                     }
                     if (uiState.episodes.isNotEmpty()) {

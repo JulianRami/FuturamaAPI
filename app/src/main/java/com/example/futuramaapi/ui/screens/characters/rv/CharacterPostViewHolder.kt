@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.futuramaapi.R
 import com.example.futuramaapi.data.api.models.Character
 import com.example.futuramaapi.databinding.CharacterViewBinding
-import com.example.futuramaapi.utils.getIdFromUrl
 import com.example.futuramaapi.utils.loadCircleImage
 import com.example.futuramaapi.utils.showToast
 
@@ -18,8 +17,6 @@ class CharacterPostViewHolder(
             btnEpisodes.setOnClickListener {
                 onEpisodesClickListener(character.id)
             }
-
-
 
             tvCharacterName.text = tvCharacterName.context.getString(
                 R.string.character_name_with_position,
@@ -37,8 +34,8 @@ class CharacterPostViewHolder(
                     ContextCompat.getDrawable(
                     ivCharacterStatus.context,
                     when(character.status) {
-                        "Alive" -> R.drawable.ic_alive
-                        "Dead" -> R.drawable.ic_dead
+                        "ALIVE" -> R.drawable.ic_alive
+                        "DEAD" -> R.drawable.ic_dead
                         else -> R.drawable.ic_unknown
                     }
                 ))
@@ -46,8 +43,8 @@ class CharacterPostViewHolder(
                     ContextCompat.getColor(
                     ivCharacterStatus.context,
                     when(character.status) {
-                        "Alive" -> R.color.green
-                        "Dead" -> R.color.red
+                        "ALIVE" -> R.color.green
+                        "DEAD" -> R.color.red
                         else -> R.color.blue
                     }
                 ))
@@ -56,8 +53,8 @@ class CharacterPostViewHolder(
                         showToast(
                             getString(
                                 when(character.status) {
-                                    "Alive" -> R.string.status_alive
-                                    "Dead" -> R.string.status_dead
+                                    "ALIVE" -> R.string.status_alive
+                                    "DEAD" -> R.string.status_dead
                                     else -> R.string.status_unknown
                                 }
                             )
