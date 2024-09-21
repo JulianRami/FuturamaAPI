@@ -5,8 +5,10 @@ import com.google.gson.annotations.SerializedName
 data class Episode(
     val id: Int,
     val name: String,
-    @SerializedName("air_date")
+    val number: Int,
+    val productionCode: String,
     val airDate: String,
     @SerializedName("episode")
-    val season: String
+    val duration: Int,
+    val broadcastCode: String
 )

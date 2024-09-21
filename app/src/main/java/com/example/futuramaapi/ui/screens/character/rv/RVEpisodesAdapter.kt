@@ -17,7 +17,7 @@ class RVEpisodesAdapter():
         fun bind(episode: Episode) {
             with(binding) {
                 tvEpisodeName.text = episode.name
-                tvEpisodeSeason.text = episode.season
+                tvEpisodeCode.text = episode.productionCode
                 tvEpisodeAirDate.text = episode.airDate
             }
         }

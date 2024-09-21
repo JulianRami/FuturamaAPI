@@ -2,7 +2,7 @@ package com.example.futuramaapi.data.api.retrofit
 
 import com.example.futuramaapi.data.api.models.Character
 import com.example.futuramaapi.data.api.models.Characters
-import com.example.futuramaapi.data.api.models.Episode
+import com.example.futuramaapi.data.api.models.Episodes
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -15,7 +15,7 @@ interface ApiService {
     @GET("characters/{character_id}")
     suspend fun getCharacterById(@Path("character_id") id: Int): Character
 
-    @GET("episode/{episodeId}")
-    suspend fun getEpisodeById(@Path("episodeId") id: Int): Episode
+    @GET("episodes")
+    suspend fun getEpisodes() : Episodes
 
 }

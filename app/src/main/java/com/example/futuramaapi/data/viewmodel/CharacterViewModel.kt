@@ -26,6 +26,16 @@ class CharacterViewModel: ViewModel() {
                 isCharacterLoading = false
             )
             _uiState.value = newUiState
+            setCharacterEpisodes()
         }
+    }
+
+    private suspend fun setCharacterEpisodes() {
+        val episodes = retrofitApi.getEpisodes()
+        _uiState.value = _uiState.value.copy(
+            episodes = episodes.items,
+            isEpisodeListLoading = false
+        )
+        println(episodes)
     }
 }
